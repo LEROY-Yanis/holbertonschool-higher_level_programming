@@ -1,57 +1,52 @@
 #!/usr/bin/python3
 """
-Define a class called Square
+This module defines the Square class.
 """
 
 
 class Square:
-
     """
-    Constructor method with a default size of 0
+    Represents a square with size and position attributes.
     """
-    def __init__(self, size=0):
 
+    def __init__(self, size=0, position=(0, 0)):
         """
-        Check if 'size' is an integer
-        """
+        Initialize a new Square instance.
 
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
+        Args:
+            size (int, optional): Size of the square (default is 0).
+            position (tuple, optional): A tuple of two positive integers
+                representing the horizontal and vertical offsets (default is (0, 0)).
 
+        Raises:
+            TypeError: If size is not an integer, or if position is not a tuple
+                of 2 positive integers.
+            ValueError: If size is less than 0.
         """
-        Check if 'size' is non-negative
-        """
-
-        if size < 0:
-            raise ValueError("size must be >= 0")
-
-        """
-        Store the validated size as a private attribute
-        """
-
-        self.__size = size
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
         """
-        Getter method for the size attribute.
+        Get the size of the square.
 
         Returns:
-            int: The current size of the square.
+            int: The size of the square.
         """
         return self.__size
 
     @size.setter
     def size(self, value):
         """
-        Setter method for the size attribute with validation.
+        Set the size of the square with validation.
 
         Args:
-            value (int): The new size of the square.
+            value (int): The new size.
 
         Raises:
             TypeError: If value is not an integer.
-            ValueError: If value is negative.
+            ValueError: If value is less than 0.
         """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
@@ -62,66 +57,57 @@ class Square:
     @property
     def position(self):
         """
-        Returns the position of the square.
+        Get the position of the square.
 
-        The position is expected to be a tuple of two non-negative integers
-        representing horizontal and vertical offsets when printing the square.
+        Returns:
+            tuple: A tuple of two positive integers.
         """
-
         return self.__position
 
     @position.setter
     def position(self, value):
         """
-        Sets the position of the square.
+        Set the position of the square with validation.
 
         Args:
-            value (tuple): A tuple of two non-negative integers (x, y).
+            value (tuple): A tuple of two positive integers.
 
         Raises:
-            TypeError: If value is not a tuple of 2 non-negative integers.
+            TypeError: If value is not a tuple of 2 positive integers.
         """
-        if (not isinstance(value, tuple) or 
+        if (
+            not isinstance(value, tuple) or
             len(value) != 2 or
             not all(isinstance(num, int) for num in value) or
-            not all(num >= 0 for num in value)):
+            not all(num >= 0 for num in value)
+        ):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
-    """
-    Method to calculate the area of the square
-    """
-
     def area(self):
-
         """
-        The area of a square is size squared
-        """
+        Compute the area of the square.
 
+        Returns:
+            int: The area of the square.
+        """
         return self.__size * self.__size
 
-    """
-    Method to print the square using the '#' character
-    """
     def my_print(self):
         """
-        If size is 0, just print a newline
-        """
+        Print the square with the character '#',
+        applying the position offsets.
 
+        If size is 0, prints an empty line.
+        """
         if self.__size == 0:
             print()
             return
 
-        """
-        Vertical offset
-        """
-
-        for i in range(self.__position[1]):
+        # Vertical offset
+        for _ in range(self.__position[1]):
             print()
 
-        """
-        Horizontal offset + square printing
-        """
-
-        for i in range(self.__size):
-            print(' ' * self.__size[0] + "#" * self.__size)
+        # Horizontal offset + square printing
+        for _ in range(self.__size):
+            print(" " * self.__position[0] + "#" * self.__size)
