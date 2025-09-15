@@ -11,4 +11,4 @@ class Square:
         Private attribute to store the size of the square
         (Note: here it's hardcoded to 3, ignoring the 'size' parameter)
         """
-        self.__size__ = size
+        self.__size = size
