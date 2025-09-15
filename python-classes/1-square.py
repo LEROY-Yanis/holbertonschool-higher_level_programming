@@ -2,6 +2,8 @@
 """
 Define a class called Square
 """
+
+
 class Square:
     """
     Constructor method to initialize the square
