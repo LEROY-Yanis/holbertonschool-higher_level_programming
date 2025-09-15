@@ -16,7 +16,7 @@ class Square:
         Args:
             size (int, optional): Size of the square (default is 0).
             position (tuple, optional): A tuple of two positive integers
-                representing the horizontal and vertical offsets (default is (0, 0)).
+            representing the horizontal and vertical offsets(default is (0, 0))
 
         Raises:
             TypeError: If size is not an integer, or if position is not a tuple
