@@ -2,8 +2,10 @@
 """
 Define a class called Square
 """
+
+
 class Square:
-    
+
     """
     Constructor method with a default size of 0
     """
@@ -14,14 +16,16 @@ class Square:
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        
+
         """
         Check if 'size' is non-negative
         """
+
         if size < 0:
             raise ValueError("size must be >= 0")
-        
+
         """
         Store the validated size as a private attribute
         """
+
         self.__size = size
