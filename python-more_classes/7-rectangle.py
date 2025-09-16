@@ -9,8 +9,8 @@ class Rectangle:
     A class that defines a rectangle by width and height
     """
 
-    number_of_instances = 0   # public class attribute
-    print_symbol = "#"        # public class attribute, used in string representation
+    number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Constructor with optional width and height"""
