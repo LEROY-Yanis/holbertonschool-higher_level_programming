@@ -5,27 +5,49 @@ Define a class called Rectangle
 
 
 class Rectangle:
-
     """
-    Constructor method with a default size of 0
+    A class that defines a rectangle by width and height
     """
-    def __init__(self, size=0):
 
-        """
-        Check if 'size' is an integer
-        """
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
+    def __init__(self, width=0, height=0):
+        """Constructor with optional width and height"""
+        self.width = width
+        self.height = height
 
-        """
-        Check if 'size' is non-negative
-        """
+    @property
+    def width(self):
+        """Retrieve the width"""
+        return self.__width
 
-        if size < 0:
-            raise ValueError("size must be >= 0")
+    @width.setter
+    def width(self, value):
+        """Set the width with validation"""
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
 
-        """
-        Store the validated size as a private attribute
-        """
+    @property
+    def height(self):
+        """Retrieve the height"""
+        return self.__height
 
-        self.__size = size
+    @height.setter
+    def height(self, value):
+        """Set the height with validation"""
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
+
+    def area(self):
+        """Return the area of the rectangle"""
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """Return the perimeter of the rectangle"""
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
