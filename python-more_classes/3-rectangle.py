@@ -56,8 +56,8 @@ class Rectangle:
         """Return a string representation of the rectangle using #"""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(["#" * self.__width] * self.__height)
-
-    def __repr__(self):
-        """Return a string representation for the object"""
-        return f"<{self.__class__.__name__} object at {hex(id(self))}>"
+        else:
+            lignes = []
+            for _ in range(self.__height):
+                lignes.append("#" * self.__width)
+            return "\n".join(lignes)
