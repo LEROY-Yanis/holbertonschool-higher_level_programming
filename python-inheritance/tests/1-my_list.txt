@@ -11,3 +11,20 @@
 [1, 2, 3, 4, 5]
 >>> print(my_list)
 [1, 4, 2, 3, 5]
+
+>>> empty = MyList()
+>>> print(empty)
+[]
+>>> empty.print_sorted()
+[]
+
+# Cas déjà trié
+>>> sorted_list = MyList([1, 2, 3])
+>>> sorted_list.print_sorted()
+[1, 2, 3]
+
+# Cas avec un élément non-int -> doit lever une erreur
+>>> bad_list = MyList([1, "two", 3])
+>>> bad_list.print_sorted()
+Traceback (most recent call last):
+TypeError: all elements must be integers
