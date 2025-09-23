@@ -1,18 +1,22 @@
 #!/usr/bin/python3
 """
-Module 1-my_list
-Defines a class MyList that inherits from list
+Defines a base geometry class.
 """
 
 
 class BaseGeometry:
-	"""BaseGeometry class with area and integer_validator methods"""
+    """
+    BaseGeometry class with area and integer_validator methods.
+    """
 
-	def area(self):
-		raise Exception("area() is not implemented")
+    def area(self):
+        """
+        Raises an Exception indicating the area is not implemented.
+        """
+        raise Exception("area() is not implemented")
 
-	def integer_validator(self, name, value):
-		if type(value) is not int:
-			raise TypeError(f"{name} must be an integer")
-		if value <= 0:
-			raise ValueError(f"{name} must be greater than 0")
+    def integer_validator(self, name, value):
+        if type(value) is not int:
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be greater than 0")
