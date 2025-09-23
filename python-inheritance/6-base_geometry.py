@@ -7,8 +7,8 @@ Defines a class MyList that inherits from list
 
 class BaseGeometry:
 
-	"""BaseGeometry class with area method not implemented"""
+    """BaseGeometry class with area method not implemented"""
 
-	def area(self):
+    def area(self):
 
-		raise Exception("area() is not implemented")
+        raise Exception("area() is not implemented")
