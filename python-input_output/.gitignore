@@ -15,3 +15,7 @@
 *main.py
 # Ignorer les fichiers __pycache__
 *__pycache__
+# Ignorer les fichiers 2.py spécifiquement
+*2.py
+# Ignorer les fichiers 8-my_class spécifiquement
+8-my_class*
