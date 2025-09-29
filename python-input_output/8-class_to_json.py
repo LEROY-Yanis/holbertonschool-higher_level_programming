@@ -7,6 +7,7 @@ of an object (string).
 
 def class_to_json(obj):
     """
-    Returns the dictionary description of a simple data structure for JSON serialization.
+    Returns the dictionary description of a simple data 
+    structure for JSON serialization.
     """
     return obj.__dict__
