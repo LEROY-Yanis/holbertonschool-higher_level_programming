@@ -11,7 +11,7 @@
 *.log
 #ignore les fichiers .out
 *.out
-# Ignorer les fichiers main.c spécifiquement
+# Ignorer les fichiers main.c et main.py spécifiquement
 *main.py
 # Ignorer les fichiers __pycache__
 *__pycache__
