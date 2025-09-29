@@ -23,5 +23,11 @@ class Student:
         named in this list are returned.
         Otherwise, returns all attributes.
         """
-        return self.__dict__
-
+        if isinstance(attrs, list):
+            new_dict = {}
+            for k in attrs:
+                if k in self.__dict__:
+                    new_dict[k] = self.__dict__[k]
+            return new_dict
+        else:
+            return self.__dict__
