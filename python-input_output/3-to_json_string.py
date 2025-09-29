@@ -7,8 +7,8 @@ import json
 
 
 def to_json_string(my_obj):
-	"""
-	Returns the JSON representation of an object (string).
-	Uses the json module and json.dumps().
-	"""
-	return json.dumps(my_obj)
+    """
+    Returns the JSON representation of an object (string).
+    Uses the json module and json.dumps().
+    """
+    return json.dumps(my_obj)
