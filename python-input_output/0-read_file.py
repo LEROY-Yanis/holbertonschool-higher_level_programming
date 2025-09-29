@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Core Function Definition for the Module
+"""
+
 
 def read_file(filename=""):
     """
