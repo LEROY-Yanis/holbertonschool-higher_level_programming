@@ -33,7 +33,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(b"404 Not Found")
 
 
-def run(port=8080):
+def run(port=8000):
 
     server_address = ('', port)
     httpd = http.server.HTTPServer(server_address, MyHandler)
