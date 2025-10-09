@@ -10,7 +10,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
 
         if self.path == '/':
             self.send_response(200)
-            self.send_header('Content-type', 'text/html')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(b"Hello, this is a simple API!")
 
@@ -23,13 +23,13 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
 
         elif self.path == '/status':
             self.send_response(200)
-            self.send_header('Content-type', 'text/html')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(b"OK")
 
         else:
             self.send_response(404)
-            self.send_header('Content-type', 'text/html')
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
             self.wfile.write(b"404 Not Found")
 
