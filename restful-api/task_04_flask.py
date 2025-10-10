@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 
 @app.route('/')
-def home(self):
+def home():
     return "Welcome to the Flask API!", 200
 
 
@@ -28,7 +28,7 @@ def data():
 @app.route('/status')
 def status():
     response = make_response("OK", 200)
-    response.header["Content-Type"] = "text/plain"
+    response.headers["Content-Type"] = "text/plain"
     return response
 
 
