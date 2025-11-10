@@ -1,0 +1,12 @@
+{
+  "name": "my-javascript-project",
+  "version": "1.0.0",
+  "description": "A JavaScript project with various scripts demonstrating different functionalities.",
+  "main": "src/1-multi_languages.js",
+  "scripts": {
+    "start": "node src/1-multi_languages.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
