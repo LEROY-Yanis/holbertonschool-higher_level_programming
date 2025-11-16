@@ -17,5 +17,6 @@
 *__pycache__
 # Ignorer les fichiers .csv
 *.csv
-# Ignorer les fichiers .html
+# Ignorer les fichiers .html sauf ceux dans templates/
 *.html
+!templates/*.html

@@ -2,13 +2,9 @@
 """
 Flask application with basic HTML templates and reusable components.
 """
-import os
 from flask import Flask, render_template
 
-# Get the directory of the current file
-basedir = os.path.abspath(os.path.dirname(__file__))
-
-app = Flask(__name__, template_folder=os.path.join(basedir, 'templates'))
+app = Flask(__name__)
 
 
 @app.route('/')
