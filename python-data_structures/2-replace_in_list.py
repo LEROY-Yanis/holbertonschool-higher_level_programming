@@ -8,7 +8,8 @@ def replace_in_list(my_list, idx, new_element):
         new_element: The new element to insert at the specified index.
 
     Returns:
-        list: The modified list with the element replaced, or the original list if the index is out of range.
+        list: The modified list with the element replaced,
+              or the original list if the index is out of range.
     """
     if idx < 0 or idx >= len(my_list):
         return my_list
