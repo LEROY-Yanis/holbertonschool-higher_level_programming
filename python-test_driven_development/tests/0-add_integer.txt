@@ -53,3 +53,10 @@ Test with string as first argument:
     Traceback (most recent call last):
         ...
     TypeError: a must be an integer
+
+Test with float overflow:
+
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
