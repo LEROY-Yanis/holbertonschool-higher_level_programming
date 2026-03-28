@@ -15,9 +15,8 @@ if __name__ == "__main__":
     )
     cur = conn.cursor()
     query = (
-        "SELECT * FROM states WHERE name = '{}' ORDER BY states.id ASC".format(
-            sys.argv[4]
-        )
+        "SELECT * FROM states WHERE BINARY name = '{}' "
+        "ORDER BY states.id ASC".format(sys.argv[4])
     )
     cur.execute(query)
     rows = cur.fetchall()
