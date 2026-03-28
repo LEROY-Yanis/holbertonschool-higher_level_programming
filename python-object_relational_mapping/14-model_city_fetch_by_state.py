@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Script that lists all City objects with their State name."""
 
 from sys import argv

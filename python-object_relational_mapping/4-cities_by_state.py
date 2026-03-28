@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Script that lists all cities with their state names."""
 
 import MySQLdb

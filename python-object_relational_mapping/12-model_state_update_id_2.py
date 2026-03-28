@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Script that changes the name of a State object with id 2."""
 
 from sys import argv

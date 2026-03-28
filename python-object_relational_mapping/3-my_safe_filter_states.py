@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """Script that safely takes a state name and displays matching states."""
 
 import MySQLdb
